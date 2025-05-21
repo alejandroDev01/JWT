@@ -1,0 +1,725 @@
+{
+  "timestamp": "2025-05-20T19:11:07.958Z",
+  "pruebas": [
+    {
+      "tipo": "query_param",
+      "prefijo": "",
+      "formato": "sinEspacios",
+      "numeroFormateado": "76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:08.471Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "",
+      "formato": "conEspacio",
+      "numeroFormateado": " 76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:08.562Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "",
+      "formato": "conGuion",
+      "numeroFormateado": "-76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:08.653Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "",
+      "formato": "conPuntos",
+      "numeroFormateado": ".76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:08.747Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "",
+      "formato": "sinEspacios",
+      "numeroFormateado": "76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:09.845Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "",
+      "formato": "conEspacio",
+      "numeroFormateado": " 76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:09.933Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "",
+      "formato": "conGuion",
+      "numeroFormateado": "-76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:10.020Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "",
+      "formato": "conPuntos",
+      "numeroFormateado": ".76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:10.109Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "+591",
+      "formato": "sinEspacios",
+      "numeroFormateado": "+59176602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:12.206Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "+591",
+      "formato": "conEspacio",
+      "numeroFormateado": "+591 76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:12.299Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "+591",
+      "formato": "conGuion",
+      "numeroFormateado": "+591-76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:12.393Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "+591",
+      "formato": "conPuntos",
+      "numeroFormateado": "+591.76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:12.484Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "+591",
+      "formato": "sinEspacios",
+      "numeroFormateado": "+59176602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:13.581Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "+591",
+      "formato": "conEspacio",
+      "numeroFormateado": "+591 76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:13.670Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "+591",
+      "formato": "conGuion",
+      "numeroFormateado": "+591-76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:13.761Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "+591",
+      "formato": "conPuntos",
+      "numeroFormateado": "+591.76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:13.853Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "591",
+      "formato": "sinEspacios",
+      "numeroFormateado": "59176602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:15.954Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "591",
+      "formato": "conEspacio",
+      "numeroFormateado": "591 76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:16.046Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "591",
+      "formato": "conGuion",
+      "numeroFormateado": "591-76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:16.141Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "591",
+      "formato": "conPuntos",
+      "numeroFormateado": "591.76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:16.231Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "591",
+      "formato": "sinEspacios",
+      "numeroFormateado": "59176602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:17.332Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "591",
+      "formato": "conEspacio",
+      "numeroFormateado": "591 76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:17.420Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "591",
+      "formato": "conGuion",
+      "numeroFormateado": "591-76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:17.508Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "591",
+      "formato": "conPuntos",
+      "numeroFormateado": "591.76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:17.596Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "cel:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "cel:76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:19.686Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "cel:",
+      "formato": "conEspacio",
+      "numeroFormateado": "cel: 76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:19.774Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "cel:",
+      "formato": "conGuion",
+      "numeroFormateado": "cel:-76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:19.873Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "cel:",
+      "formato": "conPuntos",
+      "numeroFormateado": "cel:.76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:19.962Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "cel:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "cel:76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:21.055Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "cel:",
+      "formato": "conEspacio",
+      "numeroFormateado": "cel: 76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:21.145Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "cel:",
+      "formato": "conGuion",
+      "numeroFormateado": "cel:-76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:21.236Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "cel:",
+      "formato": "conPuntos",
+      "numeroFormateado": "cel:.76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:21.325Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "num:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "num:76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:23.416Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "num:",
+      "formato": "conEspacio",
+      "numeroFormateado": "num: 76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:23.505Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "num:",
+      "formato": "conGuion",
+      "numeroFormateado": "num:-76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:23.595Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "num:",
+      "formato": "conPuntos",
+      "numeroFormateado": "num:.76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:23.685Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "num:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "num:76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:24.789Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "num:",
+      "formato": "conEspacio",
+      "numeroFormateado": "num: 76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:24.878Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "num:",
+      "formato": "conGuion",
+      "numeroFormateado": "num:-76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:24.967Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "num:",
+      "formato": "conPuntos",
+      "numeroFormateado": "num:.76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:25.055Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "tel:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "tel:76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:27.152Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "tel:",
+      "formato": "conEspacio",
+      "numeroFormateado": "tel: 76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:27.241Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "tel:",
+      "formato": "conGuion",
+      "numeroFormateado": "tel:-76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:27.330Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "tel:",
+      "formato": "conPuntos",
+      "numeroFormateado": "tel:.76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:27.420Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "tel:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "tel:76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:28.516Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "tel:",
+      "formato": "conEspacio",
+      "numeroFormateado": "tel: 76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:28.603Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "tel:",
+      "formato": "conGuion",
+      "numeroFormateado": "tel:-76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:28.691Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "tel:",
+      "formato": "conPuntos",
+      "numeroFormateado": "tel:.76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:28.781Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "celular:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "celular:76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:30.885Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "celular:",
+      "formato": "conEspacio",
+      "numeroFormateado": "celular: 76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:30.976Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "celular:",
+      "formato": "conGuion",
+      "numeroFormateado": "celular:-76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:31.067Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "celular:",
+      "formato": "conPuntos",
+      "numeroFormateado": "celular:.76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:31.159Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "celular:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "celular:76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:32.259Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "celular:",
+      "formato": "conEspacio",
+      "numeroFormateado": "celular: 76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:32.348Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "celular:",
+      "formato": "conGuion",
+      "numeroFormateado": "celular:-76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:32.437Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "celular:",
+      "formato": "conPuntos",
+      "numeroFormateado": "celular:.76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:32.529Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "número:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "número:76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:34.623Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "número:",
+      "formato": "conEspacio",
+      "numeroFormateado": "número: 76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:34.712Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "número:",
+      "formato": "conGuion",
+      "numeroFormateado": "número:-76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:34.800Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "número:",
+      "formato": "conPuntos",
+      "numeroFormateado": "número:.76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:34.889Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "número:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "número:76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:35.994Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "número:",
+      "formato": "conEspacio",
+      "numeroFormateado": "número: 76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:36.085Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "número:",
+      "formato": "conGuion",
+      "numeroFormateado": "número:-76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:36.177Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "número:",
+      "formato": "conPuntos",
+      "numeroFormateado": "número:.76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:36.266Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "phone:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "phone:76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:38.369Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "phone:",
+      "formato": "conEspacio",
+      "numeroFormateado": "phone: 76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:38.457Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "phone:",
+      "formato": "conGuion",
+      "numeroFormateado": "phone:-76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:38.547Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "phone:",
+      "formato": "conPuntos",
+      "numeroFormateado": "phone:.76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:38.636Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "phone:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "phone:76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:39.729Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "phone:",
+      "formato": "conEspacio",
+      "numeroFormateado": "phone: 76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:39.817Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "phone:",
+      "formato": "conGuion",
+      "numeroFormateado": "phone:-76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:39.906Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "phone:",
+      "formato": "conPuntos",
+      "numeroFormateado": "phone:.76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:39.996Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "móvil:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "móvil:76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:42.092Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "móvil:",
+      "formato": "conEspacio",
+      "numeroFormateado": "móvil: 76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:42.180Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "móvil:",
+      "formato": "conGuion",
+      "numeroFormateado": "móvil:-76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:42.270Z"
+    },
+    {
+      "tipo": "query_param",
+      "prefijo": "móvil:",
+      "formato": "conPuntos",
+      "numeroFormateado": "móvil:.76602956",
+      "exito": false,
+      "error": "<!doctype html>\n<html lang=en>\n<title>415 Unsupported Media Type</title>\n<h1>Unsupported Media Type</h1>\n<p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>\n",
+      "timestamp": "2025-05-20T19:11:42.363Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "móvil:",
+      "formato": "sinEspacios",
+      "numeroFormateado": "móvil:76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:43.459Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "móvil:",
+      "formato": "conEspacio",
+      "numeroFormateado": "móvil: 76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:43.547Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "móvil:",
+      "formato": "conGuion",
+      "numeroFormateado": "móvil:-76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:43.635Z"
+    },
+    {
+      "tipo": "body_json",
+      "prefijo": "móvil:",
+      "formato": "conPuntos",
+      "numeroFormateado": "móvil:.76602956",
+      "exito": true,
+      "respuesta": "ok",
+      "timestamp": "2025-05-20T19:11:43.725Z"
+    }
+  ]
+}
