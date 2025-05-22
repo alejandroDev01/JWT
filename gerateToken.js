@@ -124,4 +124,4 @@ rl.question('Por favor, ingresa el número de teléfono (8 dígitos): ', (numero
     
     rl.close();
     iniciarProceso(numero);
-});
+}); 

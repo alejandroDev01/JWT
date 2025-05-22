@@ -4,7 +4,7 @@ const axios = require('axios');
 
 let tokens = [];
 console.log('Tokens almacenados:', tokens);
-const SERVER_URL = 'https://dashboard-gray-zeta-28.vercel.app/api/token';
+const SERVER_URL = 'http://dashboard.pasantia.com/api/token';
 
 const client = new Client({
     authStrategy: new LocalAuth(),

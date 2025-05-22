@@ -6,11 +6,4 @@ services:
       dockerfile: Dockerfile.qr
 
     ports:
-      - "3001:3000"
-
-  token-service:
-    build:
-      context: .
-      dockerfile: Dockerfile.token
-    ports:
-      - "3800:3800"
+      - "3001:3001"
