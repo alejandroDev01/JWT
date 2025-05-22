@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.qr
-
+    environment:
+      - PORT=${PORT:-3001}
+      - SERVER_URL=${SERVER_URL:-http://dashboard.pasantia.com/api/token}
     ports:
-      - "3001:3001"
+      - "${PORT:-3001}:${PORT:-3001}"

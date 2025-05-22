@@ -3,9 +3,12 @@ const qrcode = require('qrcode-terminal');
 const axios = require('axios');
 
 let tokens = [];
-console.log('Tokens almacenados:', tokens);
-const SERVER_URL = 'http://dashboard.pasantia.com/api/token';
 
+const PORT = process.env.PORT || 3001;
+
+const SERVER_URL = 'http://dashboard.pasantia.com/api/token';
+console.log(`Iniciando servicio en puerto: ${PORT}`);
+console.log('Tokens almacenados:', tokens);
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
