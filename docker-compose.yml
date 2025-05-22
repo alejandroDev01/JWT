@@ -4,9 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.qr
-    volumes:
-      - ./.wwebjs_auth:/app/.wwebjs_auth
-      - ./.wwebjs_cache:/app/.wwebjs_cache
+
     ports:
       - "3001:3000"
 

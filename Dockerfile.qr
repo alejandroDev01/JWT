@@ -22,14 +22,10 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-# Copiar package.json y package-lock.json
 COPY package*.json ./
 
-# Instalar dependencias
 RUN npm install
 
-# Copiar el resto de los archivos
 COPY . .
 
-# Comando para ejecutar el script
 CMD ["node", "qr.js"]
