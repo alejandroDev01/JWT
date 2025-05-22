@@ -13,4 +13,4 @@ services:
       context: .
       dockerfile: Dockerfile.token
     ports:
-      - "3000:3000"
+      - "3800:3800"

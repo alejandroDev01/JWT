@@ -1,6 +1,4 @@
 FROM node:18-slim
-
-# Instalar dependencias necesarias para Puppeteer
 RUN apt-get update && apt-get install -y \
     chromium \
     libpangocairo-1.0-0 \
