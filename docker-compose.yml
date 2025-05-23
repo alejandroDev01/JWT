@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile.qr
     environment:
       - PORT=${PORT:-3001}
-      - SERVER_URL=${SERVER_URL:-http://192.168.104.217:3001/api/token}
+      - SERVER_URL=${SERVER_URL:-http://192.168.224.20:3001/api/token}
     ports:
       - "${PORT:-3001}:${PORT:-3001}"
 x

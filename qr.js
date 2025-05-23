@@ -6,8 +6,7 @@ let tokens = [];
 
 const PORT = process.env.PORT || 3001;
 
-const SERVER_URL = 'http://192.168.104.217:3001/api/token';
-// const SERVER_URL = 'http://dashboard.pasantia.com/api/token';
+const SERVER_URL = 'http://192.168.224.20:3001/api/token';
 console.log(`Iniciando servicio en puerto: ${PORT}`);
 console.log('Tokens almacenados:', tokens);
 const client = new Client({
