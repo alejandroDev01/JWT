@@ -1,90 +1,117 @@
-const { Client, LocalAuth } = require('whatsapp-web.js');
-const qrcode = require('qrcode-terminal');
-const axios = require('axios');
+const { Client, LocalAuth } = require("whatsapp-web.js");
+const qrcode = require("qrcode-terminal");
+const axios = require("axios");
+const zlib = require("zlib");
 
 let tokens = [];
-
 const PORT = process.env.PORT || 3001;
+const SERVER_URL = "https://dashboard-gray-zeta-28.vercel.app/api/token";
 
-const SERVER_URL = 'http://192.168.224.20:3001/api/token';
 console.log(`Iniciando servicio en puerto: ${PORT}`);
-console.log('Tokens almacenados:', tokens);
+
 const client = new Client({
-    authStrategy: new LocalAuth(),
-    puppeteer: {
-        headless: true,
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-accelerated-2d-canvas',
-            '--no-first-run',
-            '--no-zygote',
-            '--disable-gpu'
-        ]
-    }
+  authStrategy: new LocalAuth(),
+  puppeteer: {
+    headless: true,
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-accelerated-2d-canvas",
+      "--no-first-run",
+      "--no-zygote",
+      "--disable-gpu",
+    ],
+  },
 });
 
 function extraerToken(mensaje) {
-    const urlRegex = /https:\/\/sistemadevotacion2025.*?token=(.*?)(?:\s|$)/;
-    const match = mensaje.match(urlRegex);
-    return match ? match[1] : null;
+  const tokenRegex = /https:\/\/sistemadevotacion22025.*?token=([^\s]+)/;
+  const match = mensaje.match(tokenRegex);
+  console.log(match);
+  return match ? match[1] : null;
 }
 
+function decodificarToken(token) {
+  try {
+    const payload = token.split(".")[1];
+    const decoded = Buffer.from(payload, "base64");
+
+    const decompressed = zlib.unzipSync(decoded);
+    const datos = JSON.parse(decompressed.toString("utf-8"));
+    console.log(datos);
+    return datos;
+  } catch (error) {
+    console.error("Error al decodificar token:", error);
+    return null;
+  }
+}
 
 async function enviarTokens() {
-    if (tokens.length >= 10) {
-        try {
-            const tokensSoloValores = tokens.map(t => t.token);
-            const response = await axios.post(SERVER_URL, { tokens: tokensSoloValores });
-            console.log('Tokens enviados exitosamente:', response.data);
-            // Limpiar el array después de enviar
-            tokens = [];
-        } catch (error) {
-            console.error('Error al enviar tokens:', error);
-        }
+  if (tokens.length > 0) {
+    try {
+      const response = await axios.post(
+        SERVER_URL,
+        { tokens },
+        { timeout: 5000 }
+      );
+      console.log("Datos enviados exitosamente:", response.data);
+      tokens = [];
+    } catch (error) {
+      console.error(
+        "Error al enviar datos:",
+        error.response?.data || error.message
+      );
     }
+  }
 }
 
-client.on('qr', qr => {
-    console.log('Escanea el siguiente código QR:');
-    qrcode.generate(qr, { small: true });
+client.on("qr", (qr) => {
+  console.log("Escanea el siguiente código QR:");
+  qrcode.generate(qr, { small: true });
 });
 
-client.on('ready', () => {
-    console.log('¡Cliente de WhatsApp Web conectado y listo!');
+client.on("ready", () => {
+  console.log("¡Cliente de WhatsApp Web conectado y listo!");
 });
 
-client.on('authenticated', (session) => {
-    console.log('¡Autenticación exitosa!');
+client.on("message", async (msg) => {
+  console.log("Mensaje recibido:", msg.body);
+
+  if (msg.body.includes("Primarias Bolivia 2025")) {
+    console.log("Mensaje de votación detectado");
+    const tokenCompleto = extraerToken(msg.body);
+
+    if (tokenCompleto) {
+      console.log("Token detectado:", tokenCompleto);
+
+      const datosDecodificados = decodificarToken(tokenCompleto);
+
+      if (datosDecodificados) {
+        tokens.push({
+          ...datosDecodificados,
+          token: tokenCompleto,
+        });
+
+        console.log("Datos almacenados:", {
+          numero: datosDecodificados.numero,
+          dominio: datosDecodificados.dominio,
+          remitente: msg.from,
+        });
+
+        await enviarTokens();
+      }
+    }
+  }
 });
 
-client.on('message', async msg => {
-    console.log('Mensaje recibido:', msg.body);
-    const lowerCaseMsg = msg.body.toLowerCase();
-
-    if (msg.body.includes('Participa en las *Primarias Bolivia 2025*')) {
-        const token = extraerToken(msg.body);
-        if (token) {
-            console.log('Token detectado:', token);
-            tokens.push({
-                token: token,
-                timestamp: new Date().toISOString(),
-                remitente: msg.from
-            });
-            
-            console.log('Token almacenado. Total tokens:', tokens.length);
-            await enviarTokens();
-        }
-    } 
+// Manejo de errores
+client.on("auth_failure", (error) => {
+  console.error("Error de autenticación:", error);
 });
 
-client.on('auth_failure', (error) => {
-    console.error('Error de autenticación:', error);
-});
-
-client.on('disconnected', (reason) => {
-    console.log('Cliente desconectado:', reason);
+client.on("disconnected", (reason) => {
+  console.log("Cliente desconectado:", reason);
 });
 
 client.initialize();
