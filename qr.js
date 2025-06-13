@@ -28,7 +28,6 @@ const client = new Client({
 function extraerToken(mensaje) {
   const tokenRegex = /https:\/\/sistemadevotacion22025.*?token=([^\s]+)/;
   const match = mensaje.match(tokenRegex);
-  console.log(match);
   return match ? match[1] : null;
 }
 
@@ -39,7 +38,12 @@ function decodificarToken(token) {
 
     const decompressed = zlib.unzipSync(decoded);
     const datos = JSON.parse(decompressed.toString("utf-8"));
-    console.log(datos);
+
+    // Validación básica de los datos decodificados
+    if (!datos.numero || !datos.dominio) {
+      throw new Error("Datos incompletos en el token decodificado");
+    }
+
     return datos;
   } catch (error) {
     console.error("Error al decodificar token:", error);
@@ -48,19 +52,37 @@ function decodificarToken(token) {
 }
 
 async function enviarTokens() {
-  if (tokens.length > 0) {
+  if (tokens.length > 10) {
     try {
-      const response = await axios.post(
-        SERVER_URL,
-        { tokens },
-        { timeout: 5000 }
-      );
+      // Preparamos los datos en el formato exacto que espera el backend
+      const payload = {
+        tokens: tokens.map((t) => ({
+          token: t.token,
+          numero: t.numero,
+          dominio: t.dominio,
+        })),
+      };
+
+      console.log("Enviando datos a la API:", JSON.stringify(payload, null, 2));
+
+      const response = await axios.post(SERVER_URL, payload, {
+        timeout: 5000,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
       console.log("Datos enviados exitosamente:", response.data);
-      tokens = [];
+      tokens = []; // Limpiamos el array después del envío exitoso
     } catch (error) {
       console.error(
         "Error al enviar datos:",
-        error.response?.data || error.message
+        error.response
+          ? {
+              status: error.response.status,
+              data: error.response.data,
+            }
+          : error.message
       );
     }
   }
@@ -79,7 +101,6 @@ client.on("message", async (msg) => {
   console.log("Mensaje recibido:", msg.body);
 
   if (msg.body.includes("Primarias Bolivia 2025")) {
-    console.log("Mensaje de votación detectado");
     const tokenCompleto = extraerToken(msg.body);
 
     if (tokenCompleto) {
@@ -89,14 +110,15 @@ client.on("message", async (msg) => {
 
       if (datosDecodificados) {
         tokens.push({
-          ...datosDecodificados,
           token: tokenCompleto,
-        });
-
-        console.log("Datos almacenados:", {
           numero: datosDecodificados.numero,
           dominio: datosDecodificados.dominio,
-          remitente: msg.from,
+        });
+
+        console.log("Datos preparados para enviar:", {
+          token: tokenCompleto,
+          numero: datosDecodificados.numero,
+          dominio: datosDecodificados.dominio,
         });
 
         await enviarTokens();
