@@ -22,23 +22,23 @@ services:
     ports:
       - "3001:3001"
 
-  qr-service-2:
-    build:
-      context: .
-      dockerfile: Dockerfile.qr
-    environment:
-      - PORT=3002
-      - SERVER_URL=http://190.181.22.187:3001/api/token
-    ports:
-      - "3002:3002"
+  # qr-service-2:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.qr
+  #   environment:
+  #     - PORT=3002
+  #     - SERVER_URL=http://190.181.22.187:3001/api/token
+  #   ports:
+  #     - "3002:3002"
 
-  qr-service-3:
-    build:
-      context: .
-      dockerfile: Dockerfile.qr
-    environment:
-      - PORT=3003
-      - SERVER_URL=http://190.181.22.187:3001/api/token
-    ports:
-      - "3003:3003"
+  # qr-service-3:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.qr
+  #   environment:
+  #     - PORT=3003
+  #     - SERVER_URL=http://190.181.22.187:3001/api/token
+  #   ports:
+  #     - "3003:3003"
 

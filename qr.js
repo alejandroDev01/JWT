@@ -26,7 +26,7 @@ const client = new Client({
 });
 
 function extraerToken(mensaje) {
-  const tokenRegex = /https:\/\/sistemadevotacion22025.*?token=([^\s]+)/;
+  const tokenRegex = /token=([a-zA-Z0-9.\-_]+)/;
   const match = mensaje.match(tokenRegex);
   return match ? match[1] : null;
 }
@@ -36,17 +36,25 @@ function decodificarToken(token) {
     const payload = token.split(".")[1];
     const decoded = Buffer.from(payload, "base64");
 
-    const decompressed = zlib.unzipSync(decoded);
+    let decompressed;
+    try {
+      decompressed = zlib.unzipSync(decoded);
+    } catch (zipError) {
+      console.warn(
+        "Token no comprimido, usando base64 decodificado directamente."
+      );
+      decompressed = decoded;
+    }
+
     const datos = JSON.parse(decompressed.toString("utf-8"));
 
-    // Validación básica de los datos decodificados
     if (!datos.numero || !datos.dominio) {
       throw new Error("Datos incompletos en el token decodificado");
     }
 
     return datos;
   } catch (error) {
-    console.error("Error al decodificar token:", error);
+    console.error("❌ Error al decodificar token:", error.message);
     return null;
   }
 }
@@ -54,7 +62,6 @@ function decodificarToken(token) {
 async function enviarTokens() {
   if (tokens.length > 10) {
     try {
-      // Preparamos los datos en el formato exacto que espera el backend
       const payload = {
         tokens: tokens.map((t) => ({
           token: t.token,
@@ -63,7 +70,10 @@ async function enviarTokens() {
         })),
       };
 
-      console.log("Enviando datos a la API:", JSON.stringify(payload, null, 2));
+      console.log(
+        "🚀 Enviando datos a la API:",
+        JSON.stringify(payload, null, 2)
+      );
 
       const response = await axios.post(SERVER_URL, payload, {
         timeout: 5000,
@@ -72,16 +82,13 @@ async function enviarTokens() {
         },
       });
 
-      console.log("Datos enviados exitosamente:", response.data);
-      tokens = []; // Limpiamos el array después del envío exitoso
+      console.log("✅ Datos enviados exitosamente:", response.data);
+      tokens = [];
     } catch (error) {
       console.error(
-        "Error al enviar datos:",
+        "❌ Error al enviar datos:",
         error.response
-          ? {
-              status: error.response.status,
-              data: error.response.data,
-            }
+          ? { status: error.response.status, data: error.response.data }
           : error.message
       );
     }
@@ -89,22 +96,22 @@ async function enviarTokens() {
 }
 
 client.on("qr", (qr) => {
-  console.log("Escanea el siguiente código QR:");
+  console.log("🔒 Escanea el siguiente código QR para iniciar sesión:");
   qrcode.generate(qr, { small: true });
 });
 
 client.on("ready", () => {
-  console.log("¡Cliente de WhatsApp Web conectado y listo!");
+  console.log("✅ ¡Cliente de WhatsApp Web conectado y listo!");
 });
 
 client.on("message", async (msg) => {
-  console.log("Mensaje recibido:", msg.body);
+  console.log("📩 Mensaje recibido:", msg.body);
 
   if (msg.body.includes("Primarias Bolivia 2025")) {
     const tokenCompleto = extraerToken(msg.body);
 
     if (tokenCompleto) {
-      console.log("Token detectado:", tokenCompleto);
+      console.log("🔍 Token detectado:", tokenCompleto);
 
       const datosDecodificados = decodificarToken(tokenCompleto);
 
@@ -115,7 +122,7 @@ client.on("message", async (msg) => {
           dominio: datosDecodificados.dominio,
         });
 
-        console.log("Datos preparados para enviar:", {
+        console.log("📦 Datos listos para enviar:", {
           token: tokenCompleto,
           numero: datosDecodificados.numero,
           dominio: datosDecodificados.dominio,
@@ -123,17 +130,18 @@ client.on("message", async (msg) => {
 
         await enviarTokens();
       }
+    } else {
+      console.warn("⚠️ No se detectó ningún token válido en el mensaje.");
     }
   }
 });
 
-// Manejo de errores
 client.on("auth_failure", (error) => {
-  console.error("Error de autenticación:", error);
+  console.error("❌ Error de autenticación:", error);
 });
 
 client.on("disconnected", (reason) => {
-  console.log("Cliente desconectado:", reason);
+  console.log("🔌 Cliente desconectado:", reason);
 });
 
 client.initialize();
