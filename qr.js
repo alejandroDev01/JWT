@@ -5,7 +5,7 @@ const zlib = require("zlib");
 
 let tokens = [];
 const PORT = process.env.PORT || 3001;
-const SERVER_URL = "https://dashboard-gray-zeta-28.vercel.app/api/token";
+const SERVER_URL = "http://190.181.22.187:3001/api/token";
 
 console.log(`Iniciando servicio en puerto: ${PORT}`);
 
