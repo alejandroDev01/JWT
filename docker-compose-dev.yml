@@ -1,0 +1,32 @@
+# version: "3"
+# services:
+#   qr:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile.qr
+#     environment:
+#       - PORT=${PORT:-3001}
+#       - SERVER_URL=${SERVER_URL:-https://dashboard-gray-zeta-29.vercel.app/api/token}
+#     ports:
+#       - "${PORT:-3001}:${PORT:-3001}"
+version: "4"
+services:
+  qr-1:
+    build:
+      context: .
+      dockerfile: Dockerfile.qr
+    environment:
+      - PORT=3008
+      - SERVER_URL=http://190.181.22.187:3001/api/token
+    ports:
+      - "3008:3008"
+
+  # qr-2:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.qr
+  #   environment:
+  #     - PORT=3009
+  #     - SERVER_URL=http://190.181.22.187:3001/api/token
+  #   ports:
+  #     - "3009:3009"

@@ -104,6 +104,38 @@ client.on("ready", () => {
   console.log("✅ ¡Cliente de WhatsApp Web conectado y listo!");
 });
 
+// client.on("message", async (msg) => {
+//   console.log("📩 Mensaje recibido:", msg.body);
+
+//   if (msg.body.includes("Primarias Bolivia 2025")) {
+//     const tokenCompleto = extraerToken(msg.body);
+
+//     if (tokenCompleto) {
+//       console.log("🔍 Token detectado:", tokenCompleto);
+
+//       const datosDecodificados = decodificarToken(tokenCompleto);
+
+//       if (datosDecodificados) {
+//         tokens.push({
+//           token: tokenCompleto,
+//           numero: datosDecodificados.numero,
+//           dominio: datosDecodificados.dominio,
+//         });
+
+//         console.log("📦 Datos listos para enviar:", {
+//           token: tokenCompleto,
+//           numero: datosDecodificados.numero,
+//           dominio: datosDecodificados.dominio,
+//         });
+
+//         await enviarTokens();
+//       }
+//     } else {
+//       console.warn("⚠️ No se detectó ningún token válido en el mensaje.");
+//     }
+//   }
+// });
+
 client.on("message", async (msg) => {
   console.log("📩 Mensaje recibido:", msg.body);
 
@@ -115,21 +147,17 @@ client.on("message", async (msg) => {
 
       const datosDecodificados = decodificarToken(tokenCompleto);
 
-      if (datosDecodificados) {
-        tokens.push({
-          token: tokenCompleto,
-          numero: datosDecodificados.numero,
-          dominio: datosDecodificados.dominio,
-        });
+      const tokenData = {
+        token: tokenCompleto,
+        numero: datosDecodificados?.numero || null,
+        dominio: datosDecodificados?.dominio || null,
+      };
 
-        console.log("📦 Datos listos para enviar:", {
-          token: tokenCompleto,
-          numero: datosDecodificados.numero,
-          dominio: datosDecodificados.dominio,
-        });
+      tokens.push(tokenData);
 
-        await enviarTokens();
-      }
+      console.log("📦 Datos listos para enviar:", tokenData);
+
+      await enviarTokens();
     } else {
       console.warn("⚠️ No se detectó ningún token válido en el mensaje.");
     }
