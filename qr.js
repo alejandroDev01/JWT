@@ -60,7 +60,7 @@ function decodificarToken(token) {
 }
 
 async function enviarTokens() {
-  if (tokens.length > 10) {
+  if (tokens.length > 1) {
     try {
       const payload = {
         tokens: tokens.map((t) => ({
@@ -103,38 +103,6 @@ client.on("qr", (qr) => {
 client.on("ready", () => {
   console.log("✅ ¡Cliente de WhatsApp Web conectado y listo!");
 });
-
-// client.on("message", async (msg) => {
-//   console.log("📩 Mensaje recibido:", msg.body);
-
-//   if (msg.body.includes("Primarias Bolivia 2025")) {
-//     const tokenCompleto = extraerToken(msg.body);
-
-//     if (tokenCompleto) {
-//       console.log("🔍 Token detectado:", tokenCompleto);
-
-//       const datosDecodificados = decodificarToken(tokenCompleto);
-
-//       if (datosDecodificados) {
-//         tokens.push({
-//           token: tokenCompleto,
-//           numero: datosDecodificados.numero,
-//           dominio: datosDecodificados.dominio,
-//         });
-
-//         console.log("📦 Datos listos para enviar:", {
-//           token: tokenCompleto,
-//           numero: datosDecodificados.numero,
-//           dominio: datosDecodificados.dominio,
-//         });
-
-//         await enviarTokens();
-//       }
-//     } else {
-//       console.warn("⚠️ No se detectó ningún token válido en el mensaje.");
-//     }
-//   }
-// });
 
 client.on("message", async (msg) => {
   console.log("📩 Mensaje recibido:", msg.body);

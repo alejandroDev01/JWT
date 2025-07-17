@@ -1,14 +1,3 @@
-# version: "3"
-# services:
-#   qr-service:
-#     build:
-#       context: .
-#       dockerfile: Dockerfile.qr
-#     environment:
-#       - PORT=${PORT:-3001}
-#       - SERVER_URL=${SERVER_URL:-https://dashboard-gray-zeta-29.vercel.app/api/token}
-#     ports:
-#       - "${PORT:-3001}:${PORT:-3001}"
 version: "3"
 services:
   qr-service-1:
@@ -20,6 +9,8 @@ services:
       - SERVER_URL=http://190.181.22.187:3001/api/token
     ports:
       - "3001:3001"
+    volumes:
+      - ./sessions/qr-service-1:/app/sessions
 
   qr-service-2:
     build:
@@ -30,6 +21,8 @@ services:
       - SERVER_URL=http://190.181.22.187:3001/api/token
     ports:
       - "3002:3002"
+    volumes:
+      - ./sessions/qr-service-2:/app/sessions
 
   qr-service-3:
     build:
@@ -40,6 +33,8 @@ services:
       - SERVER_URL=http://190.181.22.187:3001/api/token
     ports:
       - "3003:3003"
+    volumes:
+      - ./sessions/qr-service-3:/app/sessions
 
   qr-service-4:
     build:
@@ -50,3 +45,5 @@ services:
       - SERVER_URL=http://190.181.22.187:3001/api/token
     ports:
       - "3004:3004"
+    volumes:
+      - ./sessions/qr-service-4:/app/sessions
